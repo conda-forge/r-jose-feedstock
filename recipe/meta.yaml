@@ -1,4 +1,4 @@
-{% set version = '1.0' %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/jose_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/jose/jose_{{ version }}.tar.gz
-  sha256: 4e8aa81fd3abd551d71165332e20cf6b84e183b5059888db10768308491fcafa
+  sha256: 4922d63809f6f2469e4dd309723f1f9b0e3c8f294d22e906205ec6bee6b1c318
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
 
@@ -41,19 +41,15 @@ test:
     - "\"%R%\" -e \"library('jose')\""  # [win]
 
 about:
-  home: https://datatracker.ietf.org/wg/jose/documents/ https://www.w3.org/TR/WebCryptoAPI/#jose
-    https://github.com/jeroen/jose
+  home: https://datatracker.ietf.org/wg/jose/documents/ https://www.w3.org/TR/WebCryptoAPI/#jose https://github.com/jeroen/jose
 
   license: MIT
-  summary: Read and write JSON Web Keys (JWK, rfc7517), generate and verify JSON Web Signatures
-    (JWS, rfc7515) and encode/decode JSON Web Tokens (JWT, rfc7519). These standards
-    provide modern signing and encryption formats that are the basis for services like
-    OAuth 2.0 or LetsEncrypt and are natively supported by browsers via the JavaScript
-    WebCryptoAPI.
+  summary: Read and write JSON Web Keys (JWK, rfc7517), generate and verify JSON Web Signatures (JWS, rfc7515) and encode/decode JSON Web Tokens (JWT, rfc7519). These standards provide modern signing and encryption formats that are the basis for services like OAuth 2.0 or LetsEncrypt and are natively supported by browsers
+    via the JavaScript WebCryptoAPI.
 
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
