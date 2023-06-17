@@ -1,11 +1,11 @@
-About r-jose
-============
+About r-jose-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-jose-feedstock/blob/main/LICENSE.txt)
 
 Home: https://datatracker.ietf.org/wg/jose/documents/ https://www.w3.org/TR/WebCryptoAPI/#jose https://github.com/jeroen/jose
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-jose-feedstock/blob/main/LICENSE.txt)
 
 Summary: Read and write JSON Web Keys (JWK, rfc7517), generate and verify JSON Web Signatures (JWS, rfc7515) and encode/decode JSON Web Tokens (JWT, rfc7519). These standards provide modern signing and encryption formats that are the basis for services like OAuth 2.0 or LetsEncrypt and are natively supported by browsers via the JavaScript WebCryptoAPI.
 
